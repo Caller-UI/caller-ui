@@ -9,17 +9,16 @@ const props = defineProps({
     default: ""
   }
 })
-console.log(props.type,Types.includes(props.type));
 
 const cClass = computed(()=>{
-  return [Name, Types.includes(props.type) ? `c-button-${props.type}` : '' ]
+  return [Types.includes(props.type) ? `c-button-${props.type}` : '' ]
 })
 
 </script>
 
 <template>
-  <div :class="cClass">
-    <button>
+  <div :class="Name">
+    <button :class="cClass">
       <slot></slot>
     </button>
   </div>

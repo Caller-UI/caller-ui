@@ -1,3 +1,5 @@
+@fontSize: 14px;
+
 button {
   // outline: none;
   // border: 0;
@@ -6,12 +8,43 @@ button {
 
 .c-button {
   button {
-    padding: 12px 24px;
+    padding: 6px 10px;
+    text-align: center;
+    box-sizing: border-box;
     border-radius: 4px;
+    user-select: none;
+    flex-wrap: nowrap;
+    border: none;
+    transition: 0.2s all;
+    cursor: pointer;
+    font-size: @fontSize;
+    outline: none;
+    font-weight: 400;
+    &:hover {
+      opacity: 0.9;
+    }
+    &:active {
+      opacity: 1;
+    }
+  }
+  &-primary {
+    background-color:#53A275;
+    color: #fff;
   }
   &-success {
-    button {
-      background: rgb(0, 255, 179);
-    }
+    background-color:#2C6E49;
+    color: #fff;
+  }
+  &-info {
+    background-color:#3F88C5;
+    color: #fff;
+  }
+  &-warning {
+    background-color:#FFA85C;
+    color: #fff;
+  }
+  &-danger {
+    background-color:#E94F37;
+    color: #fff;
   }
 }
