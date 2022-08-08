@@ -1,13 +1,8 @@
 @fontSize: 14px;
 
-button {
-  // outline: none;
-  // border: 0;
-  cursor: pointer;
-}
-
 .c-button {
   display: inline-flex;
+  position: relative;
   align-items: center;
   justify-content: center;
   padding: 10px 20px;
@@ -30,7 +25,25 @@ button {
   &:active {
     opacity: 1;
   }
-
+  &::after {
+    content: '';
+    display: inline-block;
+    border-radius: inherit;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: inherit;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.3s;
+  }
+  &:active::after {
+    box-shadow: none;
+    opacity: 1;
+    transition: 0s;
+  }
   &-default {
     background-color: #fff;
     color: #000;
@@ -42,22 +55,37 @@ button {
   &-primary {
     background-color: #53a275;
     color: #fff;
+    &::after {
+      box-shadow: 0 0 0 4px #53a275;
+    }
   }
   &-success {
     background-color: #2c6e49;
     color: #fff;
+    &::after {
+      box-shadow: 0 0 0 4px #2c6e49;
+    }
   }
   &-info {
     background-color: #3f88c5;
     color: #fff;
+    &::after {
+      box-shadow: 0 0 0 4px #2c6e49;
+    }
   }
   &-warning {
     background-color: #ffa85c;
     color: #fff;
+    &::after {
+      box-shadow: 0 0 0 4px #ffa85c;
+    }
   }
   &-danger {
     background-color: #e94f37;
     color: #fff;
+    &::after {
+      box-shadow: 0 0 0 4px #e94f37;
+    }
   }
   &-text {
     background: none;
