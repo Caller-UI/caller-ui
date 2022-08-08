@@ -1,8 +1,4 @@
-const Types = ['primary', 'success', 'info', 'warning', 'danger']
+const Types = ['primary', 'success', 'info', 'warning', 'danger', 'text']
 const Name = 'c-button'
 const Sizes = ['large', 'small']
-export {
-  Types,
-  Name,
-  Sizes
-}
+export { Types, Name, Sizes }

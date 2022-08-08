@@ -11,7 +11,7 @@ const props = defineProps({
 })
 
 const cClass = computed(() => {
-  return [Types.includes(props.type) ? `c-button-${props.type}` : '']
+  return [Types.includes(props.type) ? `c-button-${props.type}` : 'c-button-default']
 })
 </script>
 
