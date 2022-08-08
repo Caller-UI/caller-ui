@@ -7,11 +7,16 @@ const props = defineProps({
   type: {
     type: String,
     default: ''
+  },
+  round: {
+    type: Boolean,
+    default: false
   }
 })
+console.log(props.round, props.type)
 
 const cClass = computed(() => {
-  return [Types.includes(props.type) ? `c-button-${props.type}` : 'c-button-default']
+  return [Types.includes(props.type) ? `c-button-${props.type}` : 'c-button-default', props.round ? 'c-button-round' : '']
 })
 </script>
 

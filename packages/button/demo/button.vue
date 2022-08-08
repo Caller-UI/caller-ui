@@ -7,7 +7,9 @@
     <c-button type="warning">warning</c-button>
     <c-button type="danger">danger</c-button>
     <c-button type="text">text</c-button>
+    <c-button type="dashed">text</c-button>
     <c-button>test</c-button>
+    <c-button round>test</c-button>
   </div>
 </template>
 <style lang="less" scoped>
