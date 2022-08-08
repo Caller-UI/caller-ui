@@ -1,19 +1,18 @@
 <script setup lang="ts">
-import { computed } from 'vue';
+import { computed } from 'vue'
 import { Types, Name, Sizes } from './const'
 import './Button.less'
 
 const props = defineProps({
   type: {
     type: String,
-    default: ""
+    default: ''
   }
 })
 
-const cClass = computed(()=>{
-  return [Types.includes(props.type) ? `c-button-${props.type}` : '' ]
+const cClass = computed(() => {
+  return [Types.includes(props.type) ? `c-button-${props.type}` : '']
 })
-
 </script>
 
 <template>
@@ -24,5 +23,4 @@ const cClass = computed(()=>{
   </div>
 </template>
 
-<style lang="less" scoped>
-</style>
+<style lang="less" scoped></style>
