@@ -16,12 +16,12 @@ const props = defineProps({
 console.log(props.round, props.type)
 
 const cClass = computed(() => {
-  return [Types.includes(props.type) ? `c-button-${props.type}` : 'c-button-default', props.round ? 'c-button-round' : '']
+  return [Name, Types.includes(props.type) ? `c-button-${props.type}` : 'c-button-default', props.round ? 'c-button-round' : '']
 })
 </script>
 
 <template>
-  <div :class="Name">
+  <div>
     <button :class="cClass">
       <slot></slot>
     </button>
