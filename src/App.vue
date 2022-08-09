@@ -1,18 +1,12 @@
 <script setup lang="ts">
-import Cbutton from '../packages/button/demo/button.vue'
+import Header from './views/home/Header.vue'
+// import Cbutton from '@/packages/button/demo/button.vue'
 </script>
 
 <template>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/caller-ui.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
-  </div>
-  <Cbutton />
+  <Header />
+  <!-- <Cbutton /> -->
+  <router-view></router-view>
 </template>
 
-<style lang="less" scoped>
-</style>
+<style lang="less" scoped></style>

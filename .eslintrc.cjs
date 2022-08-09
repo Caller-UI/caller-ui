@@ -17,6 +17,8 @@ module.exports = {
       '@typescript-eslint'
     ],
     rules: {
+      'space-before-function-paren': 0,
+      'vue/multi-word-component-names': 0
     },
     settings: {
       'import/resolver': {
