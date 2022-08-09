@@ -2,7 +2,6 @@
 import { computed } from 'vue'
 import { Types, Name, Sizes } from './const'
 import './Button.less'
-
 const props = defineProps({
   type: {
     type: String,
@@ -13,7 +12,6 @@ const props = defineProps({
     default: false
   }
 })
-console.log(props.round, props.type)
 
 const cClass = computed(() => {
   return [Name, Types.includes(props.type) ? `c-button-${props.type}` : 'c-button-default', props.round ? 'c-button-round' : '']
