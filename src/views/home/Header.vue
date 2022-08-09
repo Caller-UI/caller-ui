@@ -112,6 +112,7 @@ const searchFocus = () => {
   display: flex;
   align-items: center;
   position: relative;
+  z-index: 999;
 }
 input {
   transition: all 0.3s;
