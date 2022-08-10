@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { menu, system } from './const'
+import { menu, system, version } from './const'
 import { searchIndexMap } from '@/utils/IndexMap'
-import { ref } from 'vue'
+import { onMounted, ref } from 'vue'
 import router from '@/router'
 
 type Isearch = {
@@ -14,13 +14,23 @@ const searchListCurrent = ref<number>(0)
 const searchVal = ref<string>('')
 const searchList = ref<Isearch[]>([])
 const searchFlag = ref<boolean>(false)
+const theme = ref<string>('深色')
 const menuClick = (index: number) => {
   menuCurrent.value = index
 }
 const systemClick = (index: number) => {
   systemCurrent.value = index
 }
-
+const themeChange = (index: number) => {
+  if (theme.value === '深色') {
+    theme.value = '浅色'
+    document.getElementsByTagName('html')[0].className = 'dark'
+  } else {
+    theme.value = '深色'
+    document.getElementsByTagName('html')[0].className = ''
+  }
+  systemCurrent.value = index
+}
 const searchChange = () => {
   if (searchVal.value) {
     searchList.value = searchIndexMap(searchVal.value)
@@ -36,12 +46,16 @@ const listActive = (item: Isearch) => {
   searchVal.value = ''
   searchList.value = []
 }
-// const searchBlur = () => {
-//   searchFlag.value = false
-// }
-const searchFocus = () => {
-  searchFlag.value = true
+const searchBlur = (e: any) => {
+  if (e.target.localName !== 'li' && e.target.localName !== 'input') {
+    searchFlag.value = false
+  } else {
+    searchFlag.value = true
+  }
 }
+onMounted(() => {
+  window.addEventListener('click', searchBlur)
+})
 </script>
 <template>
   <div class="box">
@@ -51,7 +65,7 @@ const searchFocus = () => {
         <span :class="{ menuActive: menuCurrent === index }">{{ item }}</span>
       </div>
       <div class="searchBox">
-        <input type="text" placeholder="搜索" @input="searchChange" @focus="searchFocus" @blur="searchBlur" v-model="searchVal" />
+        <input type="text" placeholder="搜索" @input="searchChange" v-model="searchVal" />
         <ul class="list" :class="{ searchBlur: !searchFlag }" v-if="searchList.length !== 0">
           <li
             v-for="(item, index) in searchList"
@@ -67,8 +81,10 @@ const searchFocus = () => {
     </div>
     <div class="systemBox">
       <div v-for="(item, index) in system" :key="index" class="system" :class="{ systemActive: systemCurrent === index }">
-        <span @click="systemClick(index)">{{ item }}</span>
+        <span v-if="item === '深色'" @click="themeChange(index)">{{ theme }}</span>
+        <span v-else @click="systemClick(index)">{{ item }}</span>
       </div>
+      <span class="version">{{ version }}</span>
     </div>
   </div>
 </template>

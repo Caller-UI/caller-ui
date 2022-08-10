@@ -10,11 +10,20 @@ const props = defineProps({
   round: {
     type: Boolean,
     default: false
+  },
+  dashed: {
+    type: Boolean,
+    default: false
   }
 })
 
 const cClass = computed(() => {
-  return [Name, Types.includes(props.type) ? `c-button-${props.type}` : 'c-button-default', props.round ? 'c-button-round' : '']
+  return [
+    Name,
+    Types.includes(props.type) ? `c-button-${props.type}` : 'c-button-default',
+    props.round ? 'c-button-round' : '',
+    props.dashed ? 'c-button-dashed' : ''
+  ]
 })
 </script>
 

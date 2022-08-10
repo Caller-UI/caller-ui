@@ -3,9 +3,9 @@
   font-size: 14px;
   justify-content: space-between;
   height: 64px;
-  background-color: #fff;
+  background-color: var(--themeColor);
   align-items: center;
-  border-bottom: 1px solid rgb(239, 239, 245);
+  border-bottom: 1px solid var(--borderColor);
 }
 .menuBox,
 .systemBox {
@@ -19,7 +19,7 @@
     cursor: pointer;
     transition: all 0.5s;
     &:hover {
-      color: #18a058;
+      color: var(--menuColor);
     }
   }
   .system {
@@ -29,7 +29,7 @@
     transition: all 0.5s;
     border-radius: 2px;
     &:hover {
-      background-color: rgb(236, 232, 232);
+      background-color: var(--systemBgColor);
     }
   }
 }
@@ -42,7 +42,8 @@
 input {
   transition: all 0.3s;
   height: 30px;
-  border: 1px solid rgb(226, 226, 230);
+  border: 1px solid var(--borderColor);
+  background-color: var(--inputBgColor);
   border-radius: 4px;
   text-indent: 8px;
   outline: none;
@@ -51,10 +52,10 @@ input {
     font-size: 14px;
   }
   &:hover {
-    border-color: #18a058;
+    border-color: var(--menuColor);
   }
   &:focus {
-    border-color: #18a058;
+    border-color: var(--menuColor);
     box-shadow: 0 0 0 2px rgba(24, 160, 88, 0.2);
   }
 }
@@ -80,11 +81,14 @@ input {
     }
   }
 }
+.version {
+  margin-right: 5px;
+}
 .menuActive {
-  color: #18a058;
+  color: var(--menuColor);
 }
 .systemActive {
-  background-color: rgb(236, 232, 232);
+  background-color: var(--systemBgColor);
 }
 .searchListActive {
   background-color: pink;

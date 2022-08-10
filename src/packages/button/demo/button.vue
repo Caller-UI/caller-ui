@@ -1,19 +1,11 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import Hovbutton from './hovDemo.vue'
+import Dashedbutton from './dashedDemo.vue'
+</script>
 <template>
-  <div class="box">
-    <c-button type="success">success</c-button>
-    <c-button type="primary">primary</c-button>
-    <c-button type="info">info</c-button>
-    <c-button type="warning">warning</c-button>
-    <c-button type="danger">danger</c-button>
-    <c-button type="text">text</c-button>
-    <c-button type="dashed">text</c-button>
-    <c-button>test</c-button>
-    <c-button round>test</c-button>
+  <div>
+    <Hovbutton />
+    <Dashedbutton />
   </div>
 </template>
-<style lang="less" scoped>
-.box {
-  display: flex;
-}
-</style>
+<style lang="less" scoped></style>

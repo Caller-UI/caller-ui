@@ -15,7 +15,7 @@ const searchIndexMap = (keyword: string) => {
   const result: any[] = []
   let item = iterator.next()
   do {
-    if (item.value.toLocaleLowerCase().search(keyword.toLocaleLowerCase()) !== -1 && item.value) result.push(IndexMap.get(item.value))
+    if (item.value && item.value.toLocaleLowerCase().search(keyword.toLocaleLowerCase()) !== -1) result.push(IndexMap.get(item.value))
     item = iterator.next()
   } while (!item.done)
   return result
