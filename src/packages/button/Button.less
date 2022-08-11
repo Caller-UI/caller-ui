@@ -25,7 +25,6 @@
 
   /* 基础 */
   .btnHov(@color) {
-    color: var(--textColor);
     background-color: @color;
     &:hover {
       opacity: 0.8;
@@ -59,9 +58,9 @@
   &-default {
     background-color: inherit;
     color: var(--defultColor);
-    border: 1px solid #d9d9d9;
+    border: 1px solid @defaultBorderColor;
     &:hover {
-      border-color: #646cff;
+      border-color: @defaultBorderHoverColor;
     }
   }
   &-primary {
@@ -100,7 +99,7 @@
     color: inherit;
     border: 1px dashed;
     &:hover {
-      border-color: #646cff;
+      border-color: @defaultBorderHoverColor;
     }
   }
 
