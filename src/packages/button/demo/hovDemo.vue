@@ -9,6 +9,7 @@
       <c-button type="info">info</c-button>
       <c-button type="warning">warning</c-button>
       <c-button type="danger">danger</c-button>
+      <c-button type="danger" round>danger</c-button>
       <c-button type="text">text</c-button>
     </div>
   </div>

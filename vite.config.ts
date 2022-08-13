@@ -12,7 +12,7 @@ export default defineConfig({
   plugins: [vue()],
   build: {
     lib: {
-      entry: './packages/index.ts',
+      entry: resolve(__dirname, 'src/packages/index.ts'),
       name: 'caller-ui',
       fileName: (format) => `caller-ui.${format}.js`
       // formats: ['es', 'umd']
