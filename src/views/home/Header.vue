@@ -37,7 +37,6 @@ const listActive = (item: Isearch) => {
   searchList.value = []
 }
 const searchBlur = (e: any) => {
-  console.log(e.target)
   if (e.target.id === 'searchInput' || e.target.className === 'searchListActive') {
     searchFlag.value = true
   } else {

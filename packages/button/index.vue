@@ -33,11 +33,9 @@ const cClass = computed(() => {
 </script>
 
 <template>
-  <div>
     <button :class="cClass">
       <slot></slot>
     </button>
-  </div>
 </template>
 
 <style lang="less" scoped></style>
