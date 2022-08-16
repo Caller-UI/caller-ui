@@ -1,11 +1,10 @@
 <script setup lang="ts">
-import Header from './views/home/Header.vue'
+import Header from './views/home/header/Header.vue'
 // import Cbutton from '@/packages/button/demo/button.vue'
 </script>
 
 <template>
   <Header />
-  <!-- <Cbutton /> -->
   <router-view></router-view>
 </template>
 

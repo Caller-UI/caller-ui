@@ -1,5 +1,5 @@
 :root {
-  --systemBgColor: rgb(236, 232, 232); // 背景颜色
+  --systemBgColor: rgb(236, 232, 232); // headerxitong背景颜色
   --themeColor: #fff; // 主题颜色
   --doctextColor: #213547; // 文字颜色
   --borderColor: rgb(239, 239, 245); // border颜色
@@ -7,10 +7,58 @@
   --inputShadow: rgb(226, 226, 230); // 输入框阴影色
   --inputSearchBg: #e9e6e6; // 搜索列表背景色
   --menuColor: #18a058; // header菜单颜色
+  --headerHeight: 64px; // header高度
+  --sliderLiBgColor: rgba(24, 160, 88, 0.1); // 左侧列表li背景色
+  --docCodeBgColor: #f4f4f8;
   transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
   color: var(--doctextColor);
   border-color: var(--borderColor);
   background-color: var(--themeColor);
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.doc-body p:not(.show-box p) {
+  font-size: 14px;
+  font-weight: 600;
+}
+code {
+  background-color: var(--docCodeBgColor);
+  line-height: 1.4;
+  display: inline-block;
+  box-sizing: border-box;
+  font-family: v-mono, SFMono-Regular, Menlo, Consolas, Courier, monospace;
+  padding: 0.05em 0.35em 0 0.35em;
+  border-radius: 2px;
+}
+/* 设置滚动条的样式 */
+&::-webkit-scrollbar {
+  width: 6px;
+}
+&::-webkit-scrollbar-thumb {
+  background-color: #0003;
+  border-radius: 10px;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+}
+&::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+.dark {
+  ::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.2);
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.4);
+    }
+  }
 }
 
 /* 深色模式样式*/
@@ -22,4 +70,6 @@ html.dark {
   --inputBgColor: rgba(255, 255, 255, 0.09);
   --inputShadow: rgba(255, 255, 255, 0.2);
   --inputSearchBg: #5e5e5e;
+  --sliderLiBgColor: #7c7c7c4d;
+  --docCodeBgColor: #ffffff1f;
 }
