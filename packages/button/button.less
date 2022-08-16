@@ -1,6 +1,4 @@
 @import url('../style/const.less');
-@fontSize: 14px;
-@btnHeight: 32px;
 
 .c-button {
   display: inline-flex;
@@ -18,6 +16,7 @@
   flex-wrap: nowrap;
   border: none;
   transition: 0.2s all;
+  height: @btnHeight;
   color: var(--textColor);
   cursor: pointer;
   font-size: @fontSize;
@@ -84,19 +83,13 @@
     color: @textColor;
   }
   &-size-large {
-    height: @btnHeight * 1.25;
-    font-size: 16px;
-    font-size: @fontSizeLarge;
-    padding: 0 20px;
-  }
-  &-size-large {
-    height: @btnHeight * 1.25;
+    height: @btnHeightLarge;
     font-size: 16px;
     font-size: @fontSizeLarge;
     padding: 0 20px;
   }
   &-size-small {
-    height: (@btnHeight / 1.25);
+    height: @btnHeightSmall;
     font-size: 12px;
     font-size: @fontSizeSmall;
     padding: 0 8px;
@@ -142,7 +135,23 @@
       .btnDash(@dangerColor);
     }
   }
+  // round
   &-round {
-    border-radius: 22px;
+    border-radius: @btnHeight;
+    // padding: 0 (@btnHeight / 1.6);
+  }
+  // circle
+  &-circle {
+    border-radius: 50%;
+    width: @btnHeight;
+    padding: 0;
+  }
+
+  &-circle&-size-large {
+    width: @btnHeightLarge;
+  }
+
+  &-circle&-size-small {
+    width: @btnHeightSmall;
   }
 }

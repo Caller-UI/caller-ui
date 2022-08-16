@@ -1,0 +1,65 @@
+<script setup lang="ts">
+import BaseDemo from './baseDemo.vue'
+import SizeDemo from './sizeDemo.vue'
+import DashedDemo from './dashedDemo.vue'
+import ShapeDemo from './shapeDemo.vue'
+</script>
+
+# 按钮 Button   
+<br>
+
+按钮用来触发一些操作。
+
+## 演示
+
+### 基础
+
+按钮的 `type` 分别为 `default`、`success`、`primary`、`info`、`warning` 、`danger` 和 `text`
+
+<show-box comp-name="button" demo-name="baseDemo">
+  <BaseDemo/>
+</show-box>
+
+
+### 虚线按钮
+
+使用 `dashed` 来使用虚线按钮
+
+<show-box comp-name="button" demo-name="dashedDemo">
+  <DashedDemo/>
+</show-box>
+
+### 尺寸
+
+有`small`、`normal`和`big`尺寸
+
+<show-box comp-name="button" demo-name="sizeDemo">
+  <SizeDemo/>
+</show-box>
+
+### 形状
+
+有`circle`、`round`和`default`三种形状
+
+<show-box comp-name="button" demo-name="shapeDemo">
+  <ShapeDemo/>
+</show-box>
+
+### 图标
+
+### 禁用
+
+### 加载中
+
+---
+
+## API
+
+### Button Props
+
+| **111** | **222** | **333** |
+| ------- | ------- | ------- |
+| 啊啊    | 222     | 33      |
+| 214     | 213     | 44      |
+
+### Button Slots

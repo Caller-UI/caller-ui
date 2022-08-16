@@ -18,6 +18,10 @@ const props = defineProps({
   dashed: {
     type: Boolean,
     default: false
+  },
+  circle: {
+    type: Boolean,
+    default: false
   }
 })
 
@@ -27,17 +31,16 @@ const cClass = computed(() => {
     Types.includes(props.type) ? `c-button-${props.type}` : 'c-button-default',
     Sizes.includes(props.size) ? ` ${Name}-size-${props.size}` : '',
     props.round ? 'c-button-round' : '',
-    props.dashed ? 'c-button-dashed' : ''
+    props.dashed ? 'c-button-dashed' : '',
+    props.circle ? 'c-button-circle' : ''
   ]
 })
 </script>
 
 <template>
-  <div>
-    <button :class="cClass">
-      <slot></slot>
-    </button>
-  </div>
+  <button :class="cClass">
+    <slot></slot>
+  </button>
 </template>
 
 <style lang="less" scoped></style>

@@ -1,8 +1,6 @@
-<script setup lang="ts"></script>
 <template>
-  <div class="box">
-    <div class="title">虚线按钮</div>
-    <div class="fx">
+  <div>
+    <div>
       <c-button dashed>Default</c-button>
       <c-button type="success" dashed>success</c-button>
       <c-button type="primary" dashed>primary</c-button>
@@ -13,6 +11,3 @@
     </div>
   </div>
 </template>
-<style lang="less" scoped>
-@import '@/packages/style/commom.less';
-</style>

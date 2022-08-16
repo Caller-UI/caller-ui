@@ -15,7 +15,7 @@ const router = createRouter({
         {
           path: 'button',
           name: 'button',
-          component: () => import('@/packages/button/demo/button.vue')
+          component: () => import('#/packages/button/demo/doc.md')
         }
       ]
     }
