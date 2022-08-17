@@ -24,6 +24,6 @@ caller-ui 推荐使用 [xicons](https://www.xicons.org/) 作为图标库。
   <DivDemo/>
 </show-box>
 
-### 带背景色的图标
+### 带背景色的图标 
 
 有的时候加个背景显得没那么孤单。
