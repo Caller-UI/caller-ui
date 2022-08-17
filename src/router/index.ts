@@ -16,6 +16,11 @@ const router = createRouter({
           path: 'button',
           name: 'button',
           component: () => import('#/packages/button/demo/doc.md')
+        },
+        {
+          path: 'icon',
+          name: 'icon',
+          component: () => import('#/packages/icon/demo/doc.md')
         }
       ]
     }
