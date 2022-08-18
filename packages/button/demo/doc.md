@@ -3,6 +3,11 @@ import BaseDemo from './baseDemo.vue'
 import SizeDemo from './sizeDemo.vue'
 import DashedDemo from './dashedDemo.vue'
 import ShapeDemo from './shapeDemo.vue'
+import IconDemo from './iconDemo.vue'
+import TextDemo from './textDemo.vue'
+import DisabledDemo from './disabledDemo.vue'
+import ClickDemo from './clickDemo.vue'
+import LoadingDemo from './loadingDemo.vue'
 </script>
 
 # 按钮 Button   
@@ -47,10 +52,41 @@ import ShapeDemo from './shapeDemo.vue'
 
 ### 图标
 
+<show-box comp-name="button" demo-name="iconDemo">
+  <IconDemo/>
+</show-box>
+
+### 文本按钮
+
+就是文本按钮啊
+
+<show-box comp-name="button" demo-name="textDemo">
+  <TextDemo/>
+</show-box>
+
 ### 禁用
+
+哒咩哒咩哒咩！
+
+<show-box comp-name="button" demo-name="disabledDemo">
+  <DisabledDemo/>
+</show-box>
+
+### 事件
+
+处理按钮的事件。
+
+<show-box comp-name="button" demo-name="clickDemo">
+  <ClickDemo/>
+</show-box>
 
 ### 加载中
 
+按钮有加载状态。
+
+<show-box comp-name="button" demo-name="loadingDemo">
+  <LoadingDemo/>
+</show-box>
 ---
 
 ## API

@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import ComponentsItems from '@/utils/components.json'
-console.log(ComponentsItems)
 const ComponentsCurrentIndex = ref<number>()
 const ComponentsCurrentName = ref<string>('')
 const ComponentClick = (item: string, index: number) => {
@@ -12,7 +11,7 @@ const ComponentClick = (item: string, index: number) => {
 <template>
   <div class="sliderbox">
     <ul v-for="(components, index) in ComponentsItems" :key="index">
-      <span class="type">{{ components.text }}</span>
+      <span class="type">{{ `${components.text} (${components.children.length})` }}</span>
       <li
         v-for="(item, ind) in components.children"
         :key="ind"

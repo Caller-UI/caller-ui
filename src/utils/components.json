@@ -1,10 +1,10 @@
 {
   "basic": {
-    "text": "Basic",
+    "text": "通用组件",
     "children": [
       {
         "link": "/button",
-        "text": "Button"
+        "text": "按钮 Button"
       },
       {
         "link": "/border",

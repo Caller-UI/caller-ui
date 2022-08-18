@@ -5,7 +5,8 @@
   position: relative;
   align-items: center;
   justify-content: center;
-  padding: 8px 16px;
+  line-height: 1;
+  padding: 8px 11px;
   text-decoration: none;
   margin: 0;
   text-align: center;
@@ -22,15 +23,18 @@
   font-size: @fontSize;
   outline: none;
   font-weight: 400;
+  &-span {
+    margin: 0 5px;
+  }
 
   /* 基础 */
   .btnHov(@color) {
     background-color: @color;
-    &:hover {
+    &:hover :not(&-disabled) {
       opacity: 0.8;
       // background-color: lighten(@color, 10%);
     }
-    &:active {
+    &:active :not(&-disabled) {
       opacity: 1;
       background-color: @color;
     }
@@ -60,7 +64,7 @@
     color: var(--defultColor);
     border: 1px solid @defaultBorderColor;
     &:hover {
-      border-color: @defaultBorderHoverColor;
+      border-color: var(--mainColor);
     }
   }
   &-primary {
@@ -80,7 +84,11 @@
   }
   &-text {
     background: none;
-    color: @textColor;
+    padding: 0;
+    color: var(--defaultColor);
+    &:hover {
+      color: var(--mainColor);
+    }
   }
   &-size-large {
     height: @btnHeightLarge;
@@ -110,7 +118,7 @@
     color: inherit;
     border: 1px dashed;
     &:hover {
-      border-color: @defaultBorderHoverColor;
+      border-color: var(--mainColor);
     }
   }
 
@@ -153,5 +161,16 @@
 
   &-circle&-size-small {
     width: @btnHeightSmall;
+  }
+
+  // disabled
+  &-disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+
+  // loading
+  &-loading {
+    opacity: 0.5;
   }
 }

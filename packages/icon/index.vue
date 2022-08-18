@@ -12,7 +12,6 @@ const props = defineProps({
     type: Object as PropType<VNode>
   }
 })
-console.log(typeof props.color)
 </script>
 <template>
   <i class="c-icon" :style="{ color: props.color, fontSize: props.size }">
