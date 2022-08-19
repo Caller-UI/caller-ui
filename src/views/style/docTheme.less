@@ -36,6 +36,35 @@ code {
   padding: 0.05em 0.35em 0 0.35em;
   border-radius: 2px;
 }
+// .doc-content > div .vp-table > table {
+//   border-collapse: collapse;
+//   width: 100%;
+//   background-color: var(--bg-color);
+//   font-size: 14px;
+//   line-height: 1.5em;
+// }
+
+.c-table table {
+  border: 1px solid var(--borderColor);
+  padding: 5px;
+  border-collapse: collapse;
+  width: 100%;
+  text-align: left;
+  background-color: var(--bg-color);
+  font-size: 14px;
+  line-height: 1.5em;
+  thead {
+    overflow: auto;
+    padding: 2px;
+    // background: #ddd;
+    margin: 20px 10px;
+    border: 1px solid #ddd;
+  }
+  th,
+  td {
+    padding: 14px;
+  }
+}
 .show-components div {
   display: flex;
   align-items: center;

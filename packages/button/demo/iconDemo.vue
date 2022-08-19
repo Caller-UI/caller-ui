@@ -19,7 +19,7 @@ import { AirplaneTakeOff16Regular } from '@vicons/fluent'
     </c-button>
     <c-button round type="primary">
       <template #icon>
-        <c-icon><AirplaneTakeOff16Regular /></c-icon>
+        <c-icon color="#000"><AirplaneTakeOff16Regular /></c-icon>
       </template>
     </c-button>
     <c-button type="info">
