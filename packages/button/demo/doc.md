@@ -105,8 +105,6 @@ import LoadingDemo from './loadingDemo.vue'
 | loading | `boolean` | `false` | 按钮是否显示加载状态 |  |
 | round | `boolean` | `false` | 按钮是否显示圆角 |  |
 | size | `'small' \| 'normal' \| 'large'` | `'normal'` | 按钮的尺寸 |  |
-| secondary | `boolean` | `false` | 是否是次要按钮 |  |
-| strong | `boolean` | `false` | 按钮文字是否加粗 |  |
 | text | `boolean` | `false` | 是否显示为文本按钮 |  |
 | type | `'default' \| 'primary' \| 'success' \| 'info' \| 'warning' \| 'danger'` | `'default'` | 按钮的类型 |  |
 
