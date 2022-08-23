@@ -13,8 +13,6 @@ import LoadingDemo from './loadingDemo.vue'
 # 按钮 Button   
 <br>
 
-按钮用来触发一些操作。
-
 ## 演示
 
 ### 基础

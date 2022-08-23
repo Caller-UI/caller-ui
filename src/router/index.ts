@@ -21,6 +21,11 @@ const router = createRouter({
           path: 'icon',
           name: 'icon',
           component: () => import('#/packages/icon/demo/doc.md')
+        },
+        {
+          path: 'ConfigProvider',
+          name: 'ConfigProvider',
+          component: () => import('#/packages/ConfigProvider/demo/index.vue')
         }
       ]
     }
