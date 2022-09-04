@@ -15,17 +15,17 @@ const router = createRouter({
         {
           path: 'button',
           name: 'button',
-          component: () => import('#/packages/button/demo/doc.md')
+          component: () => import('#/packages/components/button/demo/doc.md')
         },
         {
           path: 'icon',
           name: 'icon',
-          component: () => import('#/packages/icon/demo/doc.md')
+          component: () => import('#/packages/components/icon/demo/doc.md')
         },
         {
           path: 'ConfigProvider',
           name: 'ConfigProvider',
-          component: () => import('#/packages/ConfigProvider/demo/index.vue')
+          component: () => import('#/packages/components/ConfigProvider/demo/index.vue')
         }
       ]
     }

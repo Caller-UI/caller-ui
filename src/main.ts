@@ -3,7 +3,7 @@ import './style.css'
 import './views/style/docTheme.less'
 import '#/packages/style/theme.less'
 
-import CUI from '#/packages/index'
+import CUI from '#/packages/components/index'
 // import CUI from 'caller-ui'
 import App from './App.vue'
 import router from '@/router'

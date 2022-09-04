@@ -2,7 +2,7 @@
 import { computed } from 'vue'
 import { Types, Name, Sizes } from './const'
 import './Button.less'
-import loading from '../icon/loading.vue'
+import loading from '../../icon/loading.vue'
 import { buttonEmits } from './button'
 const props = defineProps({
   type: {
