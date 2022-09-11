@@ -1,5 +1,6 @@
 import cButton from './button/index'
 import cIcon from './icon/index'
+import cSpace from './space/index'
 import cConfigProvider from './ConfigProvider/index'
 import { App } from 'vue'
 // const install = (app: any) => {
@@ -16,6 +17,7 @@ import { App } from 'vue'
 const components = [
   { name: 'c-button', data: cButton },
   { name: 'c-icon', data: cIcon },
+  { name: 'c-space', data: cSpace },
   { name: 'c-configProvider', data: cConfigProvider }
 ]
 const CUI = {
@@ -27,5 +29,6 @@ const CUI = {
 }
 export { cButton } // 按需引入
 export { cIcon }
+export { cSpace }
 export { cConfigProvider }
 export default CUI

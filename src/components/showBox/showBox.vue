@@ -17,9 +17,9 @@ const sourceCode = ref('')
 const isDev = import.meta.env.MODE === 'development'
 onMounted(async () => {
   if (isDev) {
-    sourceCode.value = (await import(/* @vite-ignore */ `../../../packages/components/${props.compName}/demo/${props.demoName}.vue?raw`)).default
+    sourceCode.value = (await import(/* @vite-ignore */ `../../../packages/components/${props.compName}/demo/zh/${props.demoName}.vue?raw`)).default
   } else {
-    sourceCode.value = await fetch(`../../../packages/components/${props.compName}/demo/${props.demoName}.vue`).then((res) => res.text())
+    sourceCode.value = await fetch(`../../../packages/components/${props.compName}/demo/zh/${props.demoName}.vue`).then((res) => res.text())
   }
 })
 </script>
