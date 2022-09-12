@@ -57,7 +57,7 @@ const cClass = computed(() => {
 </script>
 
 <template>
-  <button :class="cClass" @click="handleClick">
+  <button :class="cClass" @click="handleClick" tabindex="0">
     <slot v-if="iconPlacement === 'left' && props.loading === false" name="icon"></slot>
     <loading v-if="props.loading" />
     <span v-if="$slots.default" :class="`${Name}-span`"><slot></slot></span>

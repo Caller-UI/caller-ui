@@ -36,7 +36,6 @@
     }
     &:active :not(&-disabled) {
       opacity: 1;
-      background-color: @color;
     }
     &:active::after {
       box-shadow: none;
@@ -64,7 +63,34 @@
     color: var(--defultColor);
     border: 1px solid @defaultBorderColor;
     &:hover {
+      opacity: 0.8;
       border-color: var(--mainColor);
+    }
+    &:active  {
+      opacity: 1;
+    }
+    &:active::after {
+      box-shadow: none;
+      opacity: 1;
+      transition: 0s;
+    }
+    &::after {
+      content: '';
+      display: inline-block;
+      border-radius: inherit;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      background-color: inherit;
+      opacity: 0;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      transition: all 0.3s;
+      box-shadow: 1px 0 1px 5px var(--mainColor);
+    }
+    &:focus {
+      border: 1px solid var(--mainColor);
     }
   }
   &-primary {
