@@ -4,7 +4,5 @@ const handelClick = () => {
 }
 </script>
 <template>
-  <div>
-    <c-button @click="handelClick">点我</c-button>
-  </div>
+  <c-button @click="handelClick">点我</c-button>
 </template>

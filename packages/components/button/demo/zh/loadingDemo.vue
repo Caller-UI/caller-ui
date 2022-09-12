@@ -2,16 +2,20 @@
 import { ref } from 'vue'
 import { IosBicycle } from '@vicons/ionicons4'
 
+const loading = ref<boolean>(false)
+
 const handleClick = () => {
   loading.value = true
+  console.log(loading.value)
+
   setTimeout(() => {
     loading.value = false
+    console.log(loading.value)
   }, 2000)
 }
-const loading = ref<boolean>(false)
 </script>
 <template>
-  <div>
+  <c-space>
     <c-button :loading="loading" @click="handleClick">try me</c-button>
     <c-button :loading="loading" @click="handleClick">
       <template #icon>
@@ -21,6 +25,5 @@ const loading = ref<boolean>(false)
     </c-button>
     <c-button type="primary" :loading="loading" @click="handleClick">try me</c-button>
     <c-button size="large" :loading="loading" @click="handleClick">try me</c-button>
-  </div>
+  </c-space>
 </template>
-<style lang="less" scoped></style>

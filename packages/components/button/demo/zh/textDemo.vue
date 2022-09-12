@@ -2,7 +2,7 @@
 import { AlarmOutline, BeerOutline } from '@vicons/ionicons5'
 </script>
 <template>
-  <div>
+  <c-space>
     <c-button type="text">我是文本</c-button>
     <c-button type="text">
       <template #icon>
@@ -20,5 +20,5 @@ import { AlarmOutline, BeerOutline } from '@vicons/ionicons5'
       </template>
       放松一会吧
     </c-button>
-  </div>
+  </c-space>
 </template>

@@ -3,7 +3,7 @@ import { AirplaneTakeOff16Regular } from '@vicons/fluent'
 </script>
 
 <template>
-  <div>
+  <c-space>
     <c-button circle>
       <template #icon>
         <c-icon><AirplaneTakeOff16Regular /></c-icon>
@@ -27,5 +27,5 @@ import { AirplaneTakeOff16Regular } from '@vicons/fluent'
         <c-icon><AirplaneTakeOff16Regular /></c-icon>
       </template>
     </c-button>
-  </div>
+  </c-space>
 </template>

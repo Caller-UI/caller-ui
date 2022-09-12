@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
-import { CaretDownOutline } from '@vicons/ionicons5'
+import { CaretDown, CaretUp } from '@vicons/ionicons5'
 const props = defineProps({
   compName: {
     type: String,
@@ -36,7 +36,8 @@ onMounted(async () => {
       <highlightjs autodetect :code="sourceCode" v-show="codeShow" />
     </transition>
     <div class="demo-control" @click="codeShow = !codeShow">
-      <CaretDownOutline class="c-icon-caret-bottom" />
+      <CaretDown v-if="!codeShow" class="c-icon-caret-bottom" />
+      <CaretUp v-else class="c-icon-caret-bottom" />
       <span class="demo-show-title">{{ codeShow ? '隐藏代码' : '显示代码' }}</span>
     </div>
   </div>
