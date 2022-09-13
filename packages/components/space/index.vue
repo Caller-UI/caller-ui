@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, useSlots, h, PropType, StyleValue, type VNode, reactive } from 'vue'
+import { useSlots, h, PropType, StyleValue } from 'vue'
 import { sizeType, SpaceSize } from './const'
 // import { extractList } from './extractList'
 const props = defineProps({
