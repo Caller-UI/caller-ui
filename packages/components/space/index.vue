@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, useSlots, h, PropType, StyleValue, type VNode } from 'vue'
+import { ref, useSlots, h, PropType, StyleValue, type VNode, reactive } from 'vue'
 import { sizeType, SpaceSize } from './const'
 // import { extractList } from './extractList'
 const props = defineProps({
@@ -14,22 +14,6 @@ const props = defineProps({
 })
 
 const $slots: any = useSlots()
-const slotList: any = ref([])
-
-const list: VNode[] = $slots.default() || []
-console.log($slots.default(), 1)
-
-list.forEach((item, index) => {
-  slotList.value.push(
-    h(
-      'div',
-      {
-        style: 'max-width: 100%;'
-      },
-      item
-    )
-  )
-})
 
 const setStyleGap = (size: SpaceSize): string => {
   if (size === 'small') {
@@ -46,7 +30,6 @@ const setStyleGap = (size: SpaceSize): string => {
     return `${horizontal}px ${vertical}px`
   }
 }
-console.log(setStyleGap(props.size))
 
 const setStyle = () => {
   const styleObj: StyleValue = {}
@@ -58,11 +41,23 @@ const setStyle = () => {
   return styleObj
 }
 
-const spaceItem = h('div', { style: 'max-width: 100%;' }, slotList.value)
+const spaceItem = h(
+  'div',
+  { style: setStyle() },
+  h(() =>
+    $slots.default().map((item, index) =>
+      h(
+        'div',
+        {
+          style: 'max-width: 100%;'
+        },
+        h(() => item)
+      )
+    )
+  )
+)
 </script>
 <template>
-  <div :style="setStyle()">
-    <slot></slot>
-  </div>
+  <spaceItem></spaceItem>
 </template>
 <style lang="less" scoped></style>
