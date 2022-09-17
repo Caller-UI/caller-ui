@@ -1,12 +1,14 @@
 :root {
+  // --c-bezier: cubic-bezier(0.4, 0, 0.2, 1);
   --systemBgColor: rgb(236, 232, 232); // headerxitong背景颜色
   --themeColor: #fff; // 主题颜色
   --doctextColor: #213547; // 文字颜色
-  --borderColor: rgb(239, 239, 245); // border颜色
+  --borderColor: #efeff5; // border颜色
   --inputBgColor: #fff; // 输入框背景色
   --inputShadow: rgb(226, 226, 230); // 输入框阴影色
   --inputSearchBg: #e9e6e6; // 搜索列表背景色
   --menuColor: #18a058; // header菜单颜色
+  --doctdBackground: #fafafc; // 文档td背景色
   --headerHeight: 64px; // header高度
   --sliderLiBgColor: rgba(24, 160, 88, 0.1); // 左侧列表li背景色
   --docCodeBgColor: #f4f4f8;
@@ -14,6 +16,11 @@
   color: var(--doctextColor);
   border-color: var(--borderColor);
   background-color: var(--themeColor);
+}
+
+body {
+  margin: 0;
+  padding: 0;
 }
 
 ul {
@@ -59,6 +66,10 @@ code {
     // background: #ddd;
     margin: 20px 10px;
     border: 1px solid var(--borderColor);
+  }
+  th {
+    // transition: background-color 0.3s;
+    background-color: var(--doctdBackground);
   }
   th,
   td {
@@ -107,4 +118,5 @@ html.dark {
   --inputSearchBg: #5e5e5e;
   --sliderLiBgColor: #7c7c7c4d;
   --docCodeBgColor: #ffffff1f;
+  --doctdBackground: #2b2b2c;
 }

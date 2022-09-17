@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useSlots, h, PropType, StyleValue } from 'vue'
-import { sizeType, SpaceSize } from './const'
+import { sizeType, SpaceSize, SpaceDirection, SpaceAlign, SpaceJustify } from './const'
 // import { extractList } from './extractList'
 const props = defineProps({
   inline: {
@@ -10,6 +10,17 @@ const props = defineProps({
   size: {
     type: [String, Number, Array] as PropType<SpaceSize>,
     default: 'medium'
+  },
+  direction: {
+    type: String as PropType<SpaceDirection>,
+    default: 'horizontal'
+  },
+  align: {
+    type: String as PropType<SpaceAlign>
+  },
+  justify: {
+    type: String as PropType<SpaceJustify>,
+    default: 'start'
   }
 })
 
@@ -36,8 +47,10 @@ const setStyle = () => {
   styleObj.gap = setStyleGap(props.size)
   styleObj.display = props.inline ? 'inline-flex' : 'flex'
   styleObj.flexFlow = 'row wrap'
-  styleObj.alignItems = 'center'
+  styleObj.alignItems = props.align
   styleObj.justifyContent = 'flex-start'
+  styleObj.flexDirection = props.direction === 'vertical' ? 'column' : undefined
+  styleObj.justifyContent = props.justify
   return styleObj
 }
 
