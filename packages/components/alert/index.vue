@@ -58,7 +58,7 @@ const closeClass = computed(() => {
         />
         <IosInformationCircleOutline
           v-if="showIcon && !$slots.icon && (props.type === 'info' || props.type === 'warning')"
-          :class="[$slots.description ? `alert-icon-${props.type} c-alert-icon` : '`alert-icon-${props.type}`']"
+          :class="[$slots.description ? `alert-icon-${props.type} c-alert-icon` : `alert-icon-${props.type}`]"
         />
         <IosCloseCircle
           v-if="showIcon && !$slots.icon && props.type === 'error'"
