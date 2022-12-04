@@ -18,6 +18,11 @@ export const zhComponentRoutes = [
     path: 'ConfigProvider',
     name: 'ConfigProvider',
     component: () => import('#/packages/components/ConfigProvider/demo/zh/doc.md')
+  },
+  {
+    path: 'alert',
+    name: 'alert',
+    component: () => import('#/packages/components/alert/demo/zh/doc.md')
   }
 ]
 
