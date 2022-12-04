@@ -15,7 +15,7 @@ import AssistIconDemo from './assistIconDemo.vue'
 
 ### 基础
 
-按钮的 `type` 分别为 `default`、`success`、`primary`、`info`、`warning` 、`danger` 和 `text`
+告警提示的 `type` 分别为 `success`、`info`、`warning`和`error`
 
 <show-box comp-name="alert" demo-name="baseDemo">
   <BaseDemo/>
@@ -62,7 +62,7 @@ Maybe something else you want to say
 
 | 名称 | 类型 | 默认值 | 说明 | 版本 |
 | --- | --- | --- | --- | --- |
-| type | `string` | `success` | 指定警告提示的样式，有四种选择 `success`，`info` ，`warning`，`error`|  |
+| type | `string` | `info` | 指定警告提示的样式，有四种选择 `success`，`info` ，`warning`，`error`|  |
 | showIcon | `boolean` | `false` | 是否显示辅助图标 |  |
 | message | `string` \| `slot` | `false` | 警告提示内容 |  |
 | closable | `boolean` | `false` | 是否显示关闭按钮 |  |
