@@ -1,3 +1,7 @@
 const Types = ['success', 'info', 'warning', 'error']
 
-export { Types }
+const alertEmits = {
+  close: (evt: MouseEvent) => evt instanceof MouseEvent
+}
+
+export { Types, alertEmits }

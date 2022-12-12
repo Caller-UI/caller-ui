@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { IosClose, IosCheckmarkCircleOutline, IosInformationCircleOutline, IosCloseCircle } from '@vicons/ionicons4'
-import { Types } from './const'
+import { Types, alertEmits } from './const'
 import { computed, ref, useSlots } from 'vue'
 
 const props = defineProps({
@@ -21,10 +21,13 @@ const props = defineProps({
   }
 })
 
+const emit = defineEmits(alertEmits)
+
 const visible = ref(true)
 
-const close = () => {
+const close = (evt: MouseEvent) => {
   visible.value = false
+  emit('close', evt)
 }
 
 const slot = useSlots()
@@ -52,18 +55,13 @@ const closeClass = computed(() => {
   <transition :class="closeClass">
     <div :class="cClass">
       <div :class="closeClass" class="c-alert-icon action" v-if="showIcon">
-        <IosCheckmarkCircleOutline
-          v-if="showIcon && !$slots.icon && props.type === 'success'"
-          :class="[$slots.description ? `alert-icon-${props.type} c-alert-icon` : 'alert-icon-success']"
-        />
+        <IosCheckmarkCircleOutline v-if="showIcon && !$slots.icon && props.type === 'success'"
+          :class="[$slots.description ? `alert-icon-${props.type} c-alert-icon` : 'alert-icon-success']" />
         <IosInformationCircleOutline
           v-if="showIcon && !$slots.icon && (props.type === 'info' || props.type === 'warning')"
-          :class="[$slots.description ? `alert-icon-${props.type} c-alert-icon` : `alert-icon-${props.type}`]"
-        />
-        <IosCloseCircle
-          v-if="showIcon && !$slots.icon && props.type === 'error'"
-          :class="[$slots.description ? `alert-icon-${props.type} c-alert-icon` : 'alert-icon-error']"
-        />
+          :class="[$slots.description ? `alert-icon-${props.type} c-alert-icon` : `alert-icon-${props.type}`]" />
+        <IosCloseCircle v-if="showIcon && !$slots.icon && props.type === 'error'"
+          :class="[$slots.description ? `alert-icon-${props.type} c-alert-icon` : 'alert-icon-error']" />
         <slot name="icon"></slot>
       </div>
       <div class="c-alert-content" :class="closeClass">
@@ -71,7 +69,8 @@ const closeClass = computed(() => {
         <div class="c-alert-message" v-if="!$slots.message">{{ props.message }}</div>
         <slot name="description"></slot>
       </div>
-      <IosClose :class="closeClass" v-if="closable" class="alert-icon-close" @click="close" style="color: rgba(0, 0, 0, 0.45)" />
+      <IosClose :class="closeClass" v-if="closable" class="alert-icon-close" @click="close"
+        style="color: rgba(0, 0, 0, 0.45)" />
     </div>
   </transition>
 </template>
