@@ -93,7 +93,7 @@ import LoadingDemo from './loadingDemo.vue'
 
 ### Button Props
 
-<div class='c-table'>
+<div class='c-docTable'>
 
 | 名称 | 类型 | 默认值 | 说明 | 版本 |
 | --- | --- | --- | --- | --- |
@@ -112,7 +112,7 @@ import LoadingDemo from './loadingDemo.vue'
 
 ### ButtonGroup Props
 
-<div class="c-table">
+<div class="c-docTable">
 
 | 名称 | 类型 | 默认值 | 说明 |
 | --- | --- | --- | --- |
@@ -122,7 +122,7 @@ import LoadingDemo from './loadingDemo.vue'
 
 ### Button Slots
 
-<div class="c-table">
+<div class="c-docTable">
 
 | 名称    | 参数 | 说明       |
 | ------- | ---- | ---------- |

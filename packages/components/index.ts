@@ -3,6 +3,7 @@ import cIcon from './icon/index'
 import cSpace from './space/index'
 import cConfigProvider from './ConfigProvider/index'
 import cAlert from './alert/index'
+import cCard from './card/index'
 import { App } from 'vue'
 // const install = (app: any) => {
 //   app.use(cButton)
@@ -20,7 +21,8 @@ const components = [
   { name: 'c-icon', data: cIcon },
   { name: 'c-space', data: cSpace },
   { name: 'c-configProvider', data: cConfigProvider },
-  { name: 'c-alert', data: cAlert }
+  { name: 'c-alert', data: cAlert },
+  { name: 'c-card', data: cCard }
 ]
 const CUI = {
   install(vue: App<Element>) {
@@ -34,4 +36,5 @@ export { cIcon }
 export { cSpace }
 export { cConfigProvider }
 export { cAlert }
+export { cCard }
 export default CUI

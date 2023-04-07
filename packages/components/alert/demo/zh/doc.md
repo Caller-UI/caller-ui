@@ -58,7 +58,7 @@ Maybe something else you want to say
 
 ### Alert Props
 
-<div class='c-table'>
+<div class='c-docTable'>
 
 | 名称 | 类型 | 默认值 | 说明 | 版本 |
 | --- | --- | --- | --- | --- |

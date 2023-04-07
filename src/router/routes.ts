@@ -23,6 +23,11 @@ export const zhComponentRoutes = [
     path: 'alert',
     name: 'alert',
     component: () => import('#/packages/components/alert/demo/zh/doc.md')
+  },
+  {
+    path: 'card',
+    name: 'card',
+    component: () => import('#/packages/components/card/demo/zh/doc.md')
   }
 ]
 
