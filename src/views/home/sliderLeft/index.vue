@@ -1,11 +1,14 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import ComponentsItems from '@/utils/components.json'
+import { useRouter } from 'vue-router'
+const router = useRouter()
 const ComponentsCurrentIndex = ref<number>()
 const ComponentsCurrentName = ref<string>('')
-const ComponentClick = (item: string, index: number) => {
+const ComponentClick = (item: any, index: number) => {
   ComponentsCurrentIndex.value = index
-  ComponentsCurrentName.value = item
+  ComponentsCurrentName.value = item.text
+  router.push(item.link)
 }
 </script>
 <template>
@@ -16,7 +19,7 @@ const ComponentClick = (item: string, index: number) => {
         v-for="(item, ind) in components.children"
         :key="ind"
         :class="{ active: ComponentsCurrentIndex === ind && ComponentsCurrentName === item.text }"
-        @click="ComponentClick(item.text, ind)"
+        @click="ComponentClick(item, ind)"
       >
         <a href="javascript:;">{{ item.text }}</a>
       </li>
@@ -30,7 +33,7 @@ const ComponentClick = (item: string, index: number) => {
   flex-direction: column;
   width: 260px;
   background: inherit;
-  padding: 10px 10px 0px 20px;
+  padding: 10px 10px 0px 10px;
   overflow-y: auto;
   transition: all 0.5s;
   &::-webkit-scrollbar-thumb {

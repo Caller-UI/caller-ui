@@ -3,8 +3,12 @@
     "text": "通用组件",
     "children": [
       {
-        "link": "/button",
+        "link": "/zhComponents/button",
         "text": "按钮 Button"
+      },
+      {
+        "link": "/zhComponents/card",
+        "text": "卡片 Card"
       },
       {
         "link": "/border",

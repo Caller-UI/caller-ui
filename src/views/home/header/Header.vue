@@ -64,7 +64,9 @@ onBeforeUnmount(() => {
 </script>
 <template>
   <div class="box">
-    <div>icon</div>
+    <div class="ui-logo">
+      <img src="@/assets/icon.jpg" alt="" />
+    </div>
     <div class="menuBox">
       <div v-for="(item, index) in menu" :key="index" class="menu" @click="menuClick(index)">
         <span :class="{ menuActive: menuCurrent === index }">{{ item }}</span>
