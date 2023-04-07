@@ -17,7 +17,8 @@ import SliderLeft from './home/sliderLeft/index.vue'
   position: absolute;
   left: 0;
   right: 0;
-  top: calc(var(--headerHeight) + 10px);
+  // top: calc(var(--headerHeight) + 10px);
+  top: calc(var(--headerHeight));
   bottom: 0;
   z-index: -1;
 }
