@@ -11,40 +11,12 @@
         "text": "卡片 Card"
       },
       {
-        "link": "/border",
-        "text": "Border"
+        "link": "/zhComponents/icon",
+        "text": "图标 Icon"
       },
       {
-        "link": "/color",
-        "text": "Color"
-      },
-      {
-        "link": "/container",
-        "text": "Layout Container"
-      },
-      {
-        "link": "/icon",
-        "text": "Icon"
-      },
-      {
-        "link": "/layout",
-        "text": "Layout"
-      },
-      {
-        "link": "/link",
-        "text": "Link"
-      },
-      {
-        "link": "/scrollbar",
-        "text": "Scrollbar"
-      },
-      {
-        "link": "/space",
-        "text": "Space"
-      },
-      {
-        "link": "/typography",
-        "text": "Typography"
+        "link": "/zhComponents/space",
+        "text": "间距 Space"
       }
     ]
   },
